@@ -1,15 +1,12 @@
 function filterNumbers(item) {
   return !isNaN(item) && item !== ''
 }
-// This will filter out non numbers and empty strings
 
 function filterOperators(item) {
   const operators = ['+', '-', '*', '/']
 
   return filterNumbers(item) || operators.includes(item)
 }
-// Filter for operators
-
 
 function doMath(filteredArray) {
   switch (filteredArray[1]) {
@@ -25,8 +22,6 @@ function doMath(filteredArray) {
       return NaN
   }
 }
-// uses new array with number - operator - number 
-// performs math based on the operator
 
 function calculate(incoming) {
   let filteredArray = []
